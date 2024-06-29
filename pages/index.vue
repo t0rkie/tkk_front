@@ -5,7 +5,7 @@
       <h1 style="margin-bottom: 0;">{{ section.content.name }}</h1>
       <div>
         <div v-for="content in section.content.contents">
-          <div style="display: flex; margin-bottom: 10px;height: 100px;">
+          <div style="display: flex; margin-bottom: 10px;height: 100px;" @click="navigateTo('/contents/1')">
             <div style="position: relative;">
               <div style="position: absolute;top:30px;font-weight: bold;text-shadow:2px 2px #FFF;font-size: 50px;transform: skewX(-10deg);">{{ content?.ranking }}</div>
               <div style="width: 150px;">
@@ -35,6 +35,7 @@ const content_popular = {
       ranking: 1,
       content: {
         imageUrl: '/img_test/4.jpg',
+        videoUrl: 'https://www.youtube.com/watch?v=hXCmRPf3OX0',
         title: 'ONEチャンピオンシップ チンギス・アラゾフ vs. マラット・グレゴリアン'
       }
     },
@@ -42,8 +43,9 @@ const content_popular = {
       id: 2,
       ranking: 2,
       content: {
-        imageUrl: '/img_test/1.jpg',
-        title: 'Yogibo presents 超RIZIN.3 朝倉未来 vs. 平本蓮'
+        imageUrl: '/img_test/5.jpg',
+        videoUrl: '',
+        title: 'UFC マクレガー vs. チャンドラー'
       }
     },
     {
@@ -59,6 +61,33 @@ const content_popular = {
 const content_new = {
   type: 'new',
   name: '新着',
+  contents: [
+    {
+      id: 1,
+      content: {
+        imageUrl: '/img_test/1.jpg',
+        title: 'Yogibo presents 超RIZIN.3 朝倉未来 vs. 平本蓮'
+      }
+    },
+    {
+      id: 2,
+      content: {
+        imageUrl: '/img_test/5.jpg',
+        title: 'UFC マクレガー vs. チャンドラー'
+      }
+    },
+    {
+      id: 3,
+      content: {
+        imageUrl: '/img_test/7.jpg',
+        title: 'UFC FIGHT NIGHT ペレス vs. 平良'
+      }
+    }
+  ]
+}
+const content_schedule = {
+  type: 'schedule',
+  name: 'スケジュール',
   contents: [
     {
       id: 1,
@@ -83,6 +112,36 @@ const content_new = {
     }
   ]
 }
+const content_ranking = {
+  type: 'ranking',
+  name: 'ランキング',
+  contents: [
+    {
+      id: 1,
+      ranking: 1,
+      content: {
+        imageUrl: '/img_test/2.jpg',
+        title: 'チンギス・アラゾフ'
+      }
+    },
+    {
+      id: 2,
+      ranking: 2,
+      content: {
+        imageUrl: '/img_test/6.jpg',
+        title: 'スーパー・ボン'
+      }
+    },
+    {
+      id: 3,
+      ranking: 3,
+      content: {
+        imageUrl: '/img_test/3.jpg',
+        title: 'ペトロシアン'
+      }
+    },
+  ]
+}
 const sections = [
   {
     order: 1,
@@ -91,6 +150,14 @@ const sections = [
   {
     order: 2,
     content: content_new
+  },
+  {
+    order: 3,
+    content: content_schedule
+  },
+  {
+    order: 4,
+    content: content_ranking
   }
 ]
 </script>

@@ -5,6 +5,13 @@ export default defineNuxtConfig({
   // nitro: {
   //   preset: 'static',
   // },
+  build: {
+    
+  },
+  app: {
+    baseURL: '/',
+    buildAssetsDir: '/_nuxt/'
+  },
   css: [
     '@/assets/styles/style.css',
     '@/assets/styles/_common.css',

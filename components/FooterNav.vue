@@ -2,8 +2,8 @@
   <footer>
     <nav>
       <a href="/">Home</a>
-      <a href="/settings">Settings</a>
-      <a href="/profile">Profile</a>
+      <a href="/">Settings</a>
+      <a href="/">Profile</a>
     </nav>
   </footer>
 </template>

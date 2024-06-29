@@ -2,7 +2,7 @@
   <header>
     <ul>
       <li v-for="g in groups" :class="{ active: g.key === selectedGroup }">
-        {{ g.name }}
+        <span style="font-size: 1.2rem;">{{ g.name }}</span>
       </li>
     </ul>
   </header>
